@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const userInput = ref('')
 const message = ref('')
 const checked = ref('not checked')
-
+const fruit = ref([])
 </script>
 <template>
   <h1>v-model</h1>
@@ -17,6 +17,14 @@ const checked = ref('not checked')
   <h2>CheckBox</h2>
   <input id="checkbox" type="checkbox" v-model="checked" true-value="checked" false-value="not checked"/>
   <label for="checkbox">{{ checked }}</label>
+  <p>Fruits</p>
+  <input id="Apple" v-model="fruit" type="checkbox"  value="Apple">
+  <label for="Apple">Apple</label>
+  <input id="Banana" v-model="fruit" type="checkbox" value="Banana">
+  <label for="Banana">Banana</label>
+  <input id="Grape" v-model="fruit" type="checkbox" value="Grape">
+  <label for="Grape">Grape</label>
+  <p>{{ fruit }}</p>
 </template>
 
 <style scoped>
