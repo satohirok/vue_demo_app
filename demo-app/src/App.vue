@@ -7,6 +7,8 @@ const checked = ref('not checked')
 const fruit = ref([])
 
 const gender = ref('male')
+
+const selected = ref([])
 </script>
 <template>
   <h1>v-model</h1>
@@ -34,6 +36,15 @@ const gender = ref('male')
   <input id="female" v-model="gender" type="radio" value="female">
   <label for="female">female</label>
   <p>{{ gender }}</p>
+
+  <h2>Select</h2>
+  <select v-model="selected" multiple>
+    <option value="" disabled>Select One</option>
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <p>{{ selected }}</p>
 </template>
 
 <style scoped>
